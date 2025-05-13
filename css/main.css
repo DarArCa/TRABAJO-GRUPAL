@@ -24,8 +24,8 @@ header {
   align-items: center;
   justify-content: space-between;
   background-color: #1C2541;
-  padding: 0 40px;
-  height: 160px; /* AUMENTADO */
+  padding: 0 3rem;
+  height: 10rem; /* AUMENTADO */
   box-sizing: border-box;
   /* agregue animaciones en el header de aparecer lentamente, los pixeles y el ultimo valor es para el sombreado del header */
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 2);
@@ -47,8 +47,7 @@ header {
 
 
 #logo {
-  width: 90px;
-  height: 90px;
+  width: 5.5rem;
   border-radius: 50%;
   /* se le añade un diseño de sombreado y de animacion al logo para que destaque, el transition es para que tome forma de circulo en un tiempo determinado */
   transition: all 1s ease;
@@ -65,18 +64,19 @@ nav {
   flex: 1;
   display: flex;
   justify-content: center; /* CENTRADO */
-  gap: 40px;
+  gap: 2.5rem;
 }
 
 .nav-button {
   background-color: transparent;
-  padding: 20px 35px; /* MÁS GRANDES */
-  font-size: 24px;     /* TEXTO MÁS GRANDE */
+  padding: 1.2rem 2.2rem; /* MÁS GRANDES */
+  font-size: 1.5rem;     /* TEXTO MÁS GRANDE */
   color: #fff;
   font-weight: bold;
   cursor: pointer;
   border-radius: 12px;
   transition: background-color 0.3s;
+  border: 2px solid #fff;
 }
 
 .nav-button:hover{
@@ -112,39 +112,38 @@ nav {
 }
 
 main {
-  padding: 40px 20px;
+  padding: 5rem 1.3rem;
   text-align: center;
 }
-
 
 .imagen-container {
   display: flex;
   justify-content: center;
   margin-bottom: 0px;
   overflow: hidden;
-  height: 320px;
+  height: 20rem;
 }
 
 .imagen-container img {
-  width: 320px;
+  width: 20rem;
   height: auto;
   object-fit: cover;
   transition: all 0.5s ease;
 }
 
 .texto-contenido {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: white;
   line-height: 1.6;
-  max-width: 800px;
+  max-width: 40rem;
   margin: 0 auto;
 }
 
 h1{
   font-family: "Gravitas One", serif;
-  font-size: 42px;
-  margin-bottom: 30px;
-  color: #5bc0be;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #fff;
   position: relative;
   display: inline-block;
   text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -165,6 +164,84 @@ h1{
 
 
 /* TODO: este responsive tengo que revisarlo porque no esta en rem o dvh */
+/* celulares */
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    min-height: 100dvh;
+    font-size: 1rem;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    height: auto;
+    box-sizing: border-box;
+    gap: 1rem;
+  }
+  #logo {
+    width: 4.5rem;
+    border-radius: 50%;
+    height: auto;
+  }
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* CENTRADO */
+    gap: 0.7rem;
+    /* el wrap para que aparezcan los 4 sin deslizar la pantalla */
+    flex-wrap: wrap;
+  }
+  .nav-button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;/* TEXTO MÁS GRANDE */
+  }
+  main {
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+  .imagen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+  .imagen-container img {
+    width: 100%;
+    max-width: 15rem;
+    height: auto;
+  }
+  .texto-contenido {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  h1{
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+  }
+}
+
+/* tablets */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+  }
+}
 
 /* explicacion de las animaciones personalizadas. Estructura basica: 
 @keyframes nombreDeLaAnimacion {
