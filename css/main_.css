@@ -1,3 +1,7 @@
+.body{
+    background-image: url(https://giffiles.alphacoders.com/223/223282.gif);
+}
+
 .peleas-container {
   display: flex;
   flex-wrap:wrap;
