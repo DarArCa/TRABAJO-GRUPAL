@@ -7,7 +7,7 @@ body {
   background-position: center;
   height: auto;
   /* esta animacion es opcional, lo que hace es que con el keyframe genera un fecto como de respiracion de colores con el fondo */
-  animation: background_animation 3s infinite alternate;
+  animation: background_animation 2s infinite alternate;
 }
 
 @keyframes background_animation {
@@ -65,6 +65,7 @@ nav {
   display: flex;
   justify-content: center; /* CENTRADO */
   gap: 2.5rem;
+  margin-right: 45px;
 }
 
 .nav-button {
