@@ -2,6 +2,7 @@ class Cartasdc extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
+    // TODO: REvisar bien esta esctrucutra poruqe puede que haya cambiado con la modiificacion del CSS main
     this.shadowRoot.innerHTML = `
       <style>
         :host {
